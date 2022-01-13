@@ -21,7 +21,6 @@ move = () => {
     <div class="cumleler"><p>${funnyWorlds[rndWord()]}</p></div>
     <div id="mini-icon" style="top:${randTop()}px;left:${randLeft()}px" onmouseover="move(randTop(),randLeft())"><img src="squirrel.png" id="iconmini"></div>
     `
-
 }
 
 
