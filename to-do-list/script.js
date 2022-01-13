@@ -3,6 +3,7 @@ let addBtn = document.getElementById("button-addon2");
 let list = document.querySelector(".list-group")
 let inputArr = [];
 
+
 addBtn.onclick = function (e) {
     let inputVal = input.value;
     if (inputVal) {
@@ -70,7 +71,6 @@ function deleteItem(e) {
 
 function updateItem(e) {
     let parentItem = e.target.parentElement.parentNode.parentNode
-    console.log(parentItem)
     parentItem.style.transition = "all 1s ease"
     if (e.target.checked) {
         parentItem.classList.remove()
@@ -91,14 +91,7 @@ function updateItem(e) {
         
     }
 
-
-
 }
-let dates = new Date()
-
-console.log(dates.getUTCMonth())
-
-
 
 
 // localStorage.setItem("user","halit")
