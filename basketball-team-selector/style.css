@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+img {
+  width: 150px;
+  filter: drop-shadow(0px 0px 5px white);
+  z-index: -999;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #d8a56e;
+  text-align: center;
+  transition: all 0.3s easy;
+  color: black;
+}
+
+.container {
+  width: 600px;
+  text-align: center;
+  height: 900px;
+  background: #ff000024;
+  float: left;
+  background-image: url(./basketbol-sahasi.jpg);
+}
+
+.position {
+  width: 100%;
+  height: 300px;
+  float: left;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info span {
+  font-size: 25px;
+  background: #d8a56e;
+  padding: 3px 5px;
+  border-radius: 20px 0 0px 20px;
+  box-shadow: 0px 0px 4px 1px snow;
+}
+
+/* .flex i, .yedekpozisyon i {
+  height: 50px;
+} */
+
+.point {
+  background: green !important;
+  padding: 5px !important;
+  margin-right: 0 !important;
+  border-radius: 0px 20px 20px 0px !important;
+  box-shadow: -2px 0px 4px 0px #412c2c;
+  color: white;
+}
+
+.info {
+  display: flex;
+  align-items: baseline;
+  z-index: 9999;
+}
+
+.yedek-klubesi {
+  float: left;
+  height: 900px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.563);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.yedek-klubesi img {
+  width: 60px;
+  margin-bottom: -15px;
+}
+.yedek-klubesi .info span {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  background-color: darkred;
+}
+.yedek-klubesi .info .point {
+  padding: 14px 5px!important;
+}
+
+.yedekpozisyon {
+  width: 100%;
+  color: white;
+}
+.yedekpozisyon .info {
+width: 75%;
+margin: auto;
+}
+.flex-column-around {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
+}
+.container .position i {
+  margin-bottom: -20px;
+}
+
+.refresh {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
