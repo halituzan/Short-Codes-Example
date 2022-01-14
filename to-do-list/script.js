@@ -1,7 +1,7 @@
 let input = document.getElementById("todoInput");
 let addBtn = document.getElementById("button-addon2");
 let list = document.querySelector(".list-group")
-let inputObj = {};
+let inputObj = {key:""};
 
 
 let allItem = JSON.parse(localStorage.getItem("todolist"))
