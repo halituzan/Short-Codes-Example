@@ -1,11 +1,11 @@
 let input = document.getElementById("todoInput");
 let addBtn = document.getElementById("button-addon2");
 let list = document.querySelector(".list-group")
-let inputObj = {key:""};
+let inputObj = {};
 
 
-let allItem = JSON.parse(localStorage.getItem("todolist"))
-list.innerHTML = `${allItem.key}`
+//let allItem = JSON.parse(localStorage.getItem("todolist"))
+// list[0].innerHTML = `${allItem.key}`
 let checkTag = document.querySelectorAll(".form-check-input")
 let deleteTag = document.querySelectorAll(".delete")
 addBtn.onclick = function (e) {
@@ -58,13 +58,13 @@ addBtn.onclick = function (e) {
         secondDiv.appendChild(spanBtn);
 
         list.appendChild(listItem)
-        inputObj.key = list.innerHTML
+        //inputObj.key = list[0].innerHTML
         console.log(inputObj)
 
 
         input.value = ""
     }
-    localStorage.setItem("todolist", JSON.stringify(inputObj))
+    //localStorage.setItem("todolist", JSON.stringify(inputObj))
 
 }
 
