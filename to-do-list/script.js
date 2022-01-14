@@ -1,11 +1,16 @@
 let input = document.getElementById("todoInput");
 let addBtn = document.getElementById("button-addon2");
 let list = document.querySelector(".list-group")
-let inputArr = [];
+let inputObj = {};
 
 
+let allItem = JSON.parse(localStorage.getItem("todolist"))
+list.innerHTML = `${allItem.key}`
+let checkTag = document.querySelectorAll(".form-check-input")
+let deleteTag = document.querySelectorAll(".delete")
 addBtn.onclick = function (e) {
     let inputVal = input.value;
+
     if (inputVal) {
         let listItem = document.createElement("li");
         listItem.classList.add("list-group-item", "d-flex", "justify-content-between");
@@ -33,7 +38,7 @@ addBtn.onclick = function (e) {
         checkSpan.appendChild(check);
         firstDiv.appendChild(spanInput);
         let date = new Date();
-        spanInput.innerHTML = inputVal+` <sup>${date.toLocaleDateString('tr-TR')}/${date.toLocaleTimeString('tr-TR')}</sup>`;
+        spanInput.innerHTML = inputVal + ` <sup>${date.toLocaleDateString('tr-TR')} - ${date.toLocaleTimeString('tr-TR')}</sup>`;
         spanInput.classList.add("ms-2")
 
 
@@ -53,19 +58,34 @@ addBtn.onclick = function (e) {
         secondDiv.appendChild(spanBtn);
 
         list.appendChild(listItem)
-
+        inputObj.key = list.innerHTML
+        console.log(inputObj)
 
 
         input.value = ""
     }
+    localStorage.setItem("todolist", JSON.stringify(inputObj))
+
 }
+
+
+
 
 
 function deleteItem(e) {
     let parentListItem = e.target.parentElement.parentNode
+    //let change = allItem.key.toString()
+    // change.replace(/change/gi,"")
+    // console.log(typeof change)
+    // console.log(parentListItem)
     //  let grandParentList = e.target.parentElement.parentNode
     //  grandParentList.removeChild(parentListItem);
     parentListItem.remove()
+}
+for (let i = 0; i < checkTag.length; i++) {
+    checkTag[i].addEventListener("click", updateItem)
+    deleteTag[i].addEventListener("click", deleteItem)
+    console.log(allItem)
 }
 
 
@@ -74,11 +94,11 @@ function updateItem(e) {
     parentItem.style.transition = "all 1s ease"
     if (e.target.checked) {
         parentItem.classList.remove()
-        
+
         parentItem.classList.add("bg-success", "text-light")
         let secDiv = parentItem.lastChild.firstChild
         secDiv.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16"><path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/></svg>`
-        secDiv.style.color=""
+        secDiv.style.color = ""
         let dates = parentItem.firstChild.lastChild.lastChild
         let date = new Date();
         dates.innerHTML = `${date.toLocaleDateString('tr-TR')}/${date.toLocaleTimeString('tr-TR')}`
@@ -87,12 +107,12 @@ function updateItem(e) {
         parentItem.classList.add("bg-secondary")
         let secDiv = parentItem.lastChild.firstChild
         secDiv.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16"><path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/></svg>`;
-        secDiv.style.color="red"
-        
+        secDiv.style.color = "red"
+
     }
 
 }
-
+//localStorage.removeItem("todolist")
 
 // localStorage.setItem("user","halit")
 // let username = localStorage.getItem("user")
