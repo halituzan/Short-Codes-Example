@@ -22,9 +22,9 @@ start.onclick = (e) => {
     sentence2.style.display = "none"
     answ1.style.display = "none"
     answ2.style.display = "none"
+    game.style.zIndex = "999";
 }
-
-
+game.style.zIndex = "-9999";
 rand = (arr) => Math.floor(Math.random() * arr.length)
 let randO = rand(trButton);
 let indexArr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
