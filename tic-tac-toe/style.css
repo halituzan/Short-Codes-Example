@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #040b14;
+    color: wheat;
+}
+
+.wrapper {
+    width: 100%;
+    background: black;
+    box-shadow: -12px 0px 39px 0px wheat;
+    height: 300px;
+}
+
+header {
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+
+    overflow-y: auto;
+
+
+}
+.computer h1{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+}
+
+.sentence1, .sentence2,.sentence3, .sentence4, .sentence5, .sentence6{
+    width: 100%;
+    color: green;
+    overflow: hidden;
+    border-right: .15em solid white;
+    letter-spacing: .15em;
+    animation:
+        typing 0.9s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+.sentence1{
+    width: 910px;
+}
+.sentence2 {
+    width: 980px;
+}
+.sentence3 {
+    width: 490px;
+}
+.game {
+    font-size: 7rem;
+    filter: blur(4px)
+}
+table {
+    margin-bottom: 25px;
+}
+td {
+    padding: 0px 30px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.border-lr {
+    border-right: 10px solid white;
+    border-left: 10px solid white;
+}
+.border-tb {
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}

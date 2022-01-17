@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <!-- ======= wrapper start ======= -->
+    <div class="wrapper d-flex justify-content-center">
+
+        <header id="header container m-auto">
+            <div class="computer py-5 d-flex justify-content-start">
+                <h1>
+                    <div class="sentence1 sentence">Hey! Benimle bir oyun oynamaya ne dersin?</div>
+                    <div class="answ1 my-2"></div>
+                    <div class="sentence2 sentence" style="display: none;">Tic Tac Toe diye bir oyun var biliyor musun?
+                    </div>
+                    <div class="answ2 my-2"></div>
+                    <div class="sentence3 sentence" style="display: none;">O zaman oyun başlasın.</div>
+                    <div class="sentence4 sentence" style="display: none;">Kazandın Tebrik Ederim  Yeniden oynamak ister misin ?</div>
+                    <div class="sentence5 sentence"  style="display: none;">Ben Kazandım Çabuk Beni Tebrik Et</div>
+                    <div class="sentence6 sentence"  style="display: none;">Oyun Berabere Bitti Tekrar Edelim.</div>
+                    
+                </h1>
+
+            </div>
+
+        </header>
+
+    </div><!-- ======= wrapper end ======= -->
+    <div class="wrap-hero d-flex justify-content-center my-5">
+        <section id="hero">
+            <div id="answer1">
+                <button class="yes btn btn-success">Tabi ki</button>
+                <!-- <button class="no btn btn-warning">İstemiyorum</button> -->
+            </div>
+            <div id="answer2" style="display: none;">
+                <button class="understand btn btn-success">Evet Biliyorum</button>
+
+            </div>
+            <div id="answer3" style="display: none;">
+                <button class="start btn btn-success">Start</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrap-game-area d-flex justify-content-center">
+        <div class="game">
+            <table>
+                <tbody>
+                    <tr class="trTop">
+                        <td id="tdTop1" class="trButton"></td>
+                        <td id="tdTop2" class="border-lr trButton"></td>
+                        <td id="tdTop3" class="trButton"></td>
+                    </tr>
+                    <tr class="trCenter border-tb">
+                        <td id="tdCenter1" class="trButton"></td>
+                        <td id="tdCenter2" class="border-lr trButton"></td>
+                        <td id="tdCenter3" class="trButton"></td>
+                    </tr>
+                    <tr class="trBottom">
+                        <td id="tdBottom1" class="trButton"></td>
+                        <td id="tdBottom2" class="border-lr trButton"></td>
+                        <td id="tdBottom3" class="trButton"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button onclick="window.location.reload();" class="btn btn-success again" style="position: absolute; top:center;left:center;display: none;">Yeniden Oyna</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="selector.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
